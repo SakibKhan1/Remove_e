@@ -5,13 +5,11 @@
 #include<iostream>
 using namespace std;
 
-void remove_e(string a){
-    int i = a.length();
-    for(int x = 0; x <= i; x++){
-        if(a[x] == 'e'){
-            cout << "";
-        }else{
-            cout << a[x];
-        }
-    }
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void remove_e(string & sentence)
+{
+    sentence.erase(remove(sentence.begin(), sentence.end(), 'e'), sentence.end());
 }
